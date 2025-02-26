@@ -1,0 +1,425 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('https://i.imgur.com/giPLHx7.gif') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container, .menu-container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    width: 300px;
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: red;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    background: #222;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 15px;
+}
+
+.input-group i {
+    color: white;
+    margin-right: 10px;
+}
+
+.input-group input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    flex: 1;
+}
+
+button {
+    background: red;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 7px;
+}
+
+button:hover {
+    background: darkred;
+}
+
+.menu-container {
+    display: none;
+}
+
+.menu-btn {
+    margin: 10px 0;
+}
+
+#login-message {
+    margin-top: 10px;
+    font-size: 14px;
+}
+.switch-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    gap: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 20px;
+    margin-right: 10px;
+}
+.switch-text {
+    font-size: 16px;
+    color: white;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    background: #ddd;
+    border-radius: 25px;
+    transition: background 0.4s;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3.5px;
+    background-color: black;
+    border-radius: 50%;
+    transition: transform 0.4s, background 0.4s;
+}
+
+.switch input:checked + .slider {
+    background: #FF0000;
+}
+
+.switch input:checked + .slider::before {
+    transform: translateX(24px);
+    background: white;
+}
+.icon-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Khoảng cách giữa icon và chữ */
+}
+
+.glowing-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid red;
+    animation: glow 1s infinite alternate;
+}
+
+.glowing-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.icon-text {
+    font-size: 14px;
+    font-weight: bold;
+    color: red;
+    text-shadow: 0 0 5px red;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px red;
+    }
+    100% {
+        box-shadow: 0 0 15px red;
+    }
+}
+
+.status-dot1 {
+    color: Lime; /* Luôn hiển thị màu xanh */
+    font-size: 10px; /* Kích thước nhỏ */
+    margin-left: 5px;
+}
+.status-dot2 {
+    color: Yellow; /* Luôn hiển thị màu xanh */
+    font-size: 10px; /* Kích thước nhỏ */
+    margin-left: 5px;
+}
+.status-dot3 {
+    color: Red; /* Luôn hiển thị màu xanh */
+    font-size: 10px; /* Kích thước nhỏ */
+    margin-left: 5px;
+}
+.aim-icon {
+    color: transparent;
+    font-size: 14px;
+    margin-right: 5px; /* Tạo khoảng cách với chữ */
+}
+
+.aim-text {
+    color: red;
+    font-weight: bold;
+}
+.save-account {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+}
+
+.save-account i {
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+.divider2 {
+    background-color: transparent;
+    color: red;
+    font-weight: bold;
+    padding: 5px;
+    margin: 15px 0;
+    border-radius: 8px;
+    border: 1px solid red;
+}
+.time-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: white;
+}
+.time-container i {
+    font-size: 18px;
+    color: red; /* Màu vàng */
+}
+.mobile-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    color: white;
+}
+.mobile-container i {
+    font-size: 18px;
+    color: red; /* Màu vàng */
+}
+.time-container span {
+    color: #00FF00; /* Màu xanh lá */
+    font-weight: bold; /* Chữ đậm */
+}
+.mobile-container span {
+    color: #00FF00; /* Màu xanh lá */
+    font-weight: bold; /* Chữ đậm */
+}
+.expire-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    color: white;
+}
+
+.expire-container i {
+    font-size: 18px;
+    color: red; /* Màu cam đỏ */
+}
+
+#countdown-timer {
+    color: #00FF00; /* Màu đỏ cam */
+    font-weight: bold;
+}
+.greeting-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    color: white;
+}
+
+.greeting-container i {
+    font-size: 18px;
+    color: #FFD700; /* Màu vàng mặt trời */
+}
+
+#greeting-message {
+    font-weight: bold;
+}
+.greeting-container span {
+    color: #00FF00; /* Màu xanh lá */
+    font-weight: bold; /* Chữ đậm */
+}
+
+/* Hộp thông báo */
+.loading-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Icon xoay vòng */
+.loading-box i {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Nút tắt thông báo */
+.loading-box button {
+    margin-top: 10px;
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: red;
+    text-decoration: none;
+    border: 1px solid white;
+    transition: 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hiệu ứng viền sáng */
+.icon::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: linear-gradient(45deg, #ff0000, #ff7300, #ffeb00, #00ff00, #00ffea, #0000ff, #aa00ff, #ff00aa);
+    background-size: 300%;
+    top: -10px;
+    left: -10px;
+    z-index: -1;
+    transition: 0.4s ease-in-out;
+    border-radius: 50%;
+    filter: blur(6px);
+    animation: glowing 4s linear infinite;
+}
+
+/* Khi hover, icon sẽ phát sáng hơn */
+.icon:hover::before {
+    filter: blur(10px);
+}
+
+/* Hiệu ứng đổi màu */
+@keyframes glowing {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Màu viền theo từng mạng xã hội */
+.facebook { border-color: #1877F2; }
+.telegram { border-color: #0088cc; }
+.zalo { border-color: #0091ff; }
+.github { border-color: #ffffff; }
+.divider04 {
+    width: 100%;
+    height: 1px;
+    background-color: yellow;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.rain-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.water-drop {
+    position: absolute;
+    font-size: 24px;
+    color: #3498db; /* Màu xanh nước */
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+/* Hiệu ứng gợn sóng khi nước chạm đất */
+.ripple {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(52, 152, 219, 0.5);
+    border-radius: 50%;
+    animation: rippleEffect 0.8s linear;
+}
+
+@keyframes rippleEffect {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
